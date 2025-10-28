@@ -3,14 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
- use HasFactory;
 
 class Empleado extends Model
 {
-    //
-   
-    protected $fillable = 
-    [
+    protected $table = 'empleados';
+
+    protected $fillable = [
         'nombre',
         'apellido',
         'correo',

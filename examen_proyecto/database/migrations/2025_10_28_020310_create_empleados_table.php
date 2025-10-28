@@ -18,6 +18,12 @@ return new class extends Migration
             $table->string('correo')->unique();
             $table->decimal('salario', 10, 2);
             $table->timestamps();
+
+            $table->foreignId('empleado_id')
+                ->nullable()
+                ->constrained('empleados')
+                ->nullOnDelete();
+            
         });
     }
 
